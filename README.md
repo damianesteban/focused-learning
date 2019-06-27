@@ -1,3 +1,3 @@
 # Focused Learning
 
-This repository contains various learning materials
+This repository contains various learning materials and projects.
