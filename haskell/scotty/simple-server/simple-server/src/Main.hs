@@ -37,3 +37,7 @@ main = do
     get "/api/users/:id" $ do
       id <- param "id"
       json (filter (matchesId id) allUsers)
+
+    post "/api/user" $ do
+      user <- jsonData :: ActionM User
+      json user
