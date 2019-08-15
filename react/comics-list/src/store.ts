@@ -5,7 +5,7 @@ type Comic = { title: string };
 const comics = [
   { title: 'Detective Comics #10' },
   { title: 'Action Comics #1' },
-  { title: 'Avangers #1' }
+  { title: 'Avengers #1' }
 ]
 
 export const createStore = () => {

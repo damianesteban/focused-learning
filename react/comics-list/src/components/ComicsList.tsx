@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { storeContext } from '../content';
 import { useObserver } from 'mobx-react-lite';
-import { Box, Button, Collapsible, DataTable, Heading, Grommet, ResponsiveContext, Text } from 'grommet';
+import { Box, DataTable, Grommet, Text } from 'grommet';
 import { theme } from '../App';
 
 export const ComicView: React.FC<{ comics: string []}> =
