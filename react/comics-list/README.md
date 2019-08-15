@@ -1,3 +1,8 @@
+## Example App - MobX-lite
+
+This is a *basic* example app experimenting with Mobx-lite and react hooks. It isn't "pretty".
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

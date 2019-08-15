@@ -2,7 +2,7 @@ import React from 'react';
 import ComicsList from './components/ComicsList';
 import StoreProvider from './content';
 import Search from './components/Search';
-import { Box, Button, Collapsible, Heading, Grommet, ResponsiveContext } from 'grommet';
+import { Box, Button, Heading, Grommet, Stack } from 'grommet';
 import { Notification } from 'grommet-icons';
 
 export const theme = {
@@ -48,29 +48,23 @@ const App: React.FC = () => {
             />
           </AppBar>
           <Box direction='row' flex overflow={{ horizontal: 'hidden' }}>
+          <Stack anchor='center'>
             <Box flex align='center' justify='center'>
               <Box 
                 align='center' 
                 justify='center'
                 height='medium'
+                pad='large'
               >
+                <Heading level={3}>
+                  Comic Book Search
+                </Heading>
                 <Search />
                 <ComicsList />
               </Box>
             </Box>
-            {/* {showSidebar && ( */}
-              <Collapsible direction="horizontal" open={showSidebar}>
-             <Box
-              width='medium'
-              background='light-2'
-              elevation='small'
-              align='center'
-              justify='center'
-            >
-            {/* )} */}
-              sidebar
-            </Box>
-            </Collapsible>
+            </Stack>
+           
           </Box>
           </Box>
       </Grommet>
