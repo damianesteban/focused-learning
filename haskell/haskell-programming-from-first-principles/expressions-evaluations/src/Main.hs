@@ -84,7 +84,6 @@ add4WithLet w x y z =
   in z + b
 
 add4WithWhere :: Int -> Int -> Int -> Int -> Int
-
 add4WithWhere w x y z = 
     z + b
   where
@@ -117,12 +116,15 @@ addAndMultiplyTwoInts x y =
     x = 3
     y = 1000
 
+addAndMultiplyTwoIntsAgain :: Int -> Int -> Int
 addAndMultiplyTwoIntsAgain x y =
     x * 5
   where
     y = 10
     x = 10 * 5 + y
 
+-- Another exampel of a function that has a type constraint
+addAndDivideThreeInts :: Fractional a => a -> a -> a -> a
 addAndDivideThreeInts x y z =
     z / x + 7
   where
@@ -130,5 +132,17 @@ addAndDivideThreeInts x y z =
     y = negate x
     z = y * 10
 
-
 -- TODO: - Practice let...in vs. where
+
+-- More basic functions
+waxOn :: Int -> Int
+waxOn x =
+    x * 5
+  where
+    x = 6
+
+tripleWax :: Int -> Int
+tripleWax x = x * 3
+
+waxOff :: Int -> Int
+waxOff x = triple x
