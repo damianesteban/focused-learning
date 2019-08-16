@@ -48,26 +48,25 @@ const App: React.FC = () => {
             />
           </AppBar>
           <Box direction='row' flex overflow={{ horizontal: 'hidden' }}>
-          <Stack anchor='center'>
-            <Box flex align='center' justify='center'>
-              <Box 
-                align='center' 
-                justify='center'
-                height='medium'
-                pad='large'
-              >
-                <Heading level={3}>
-                  Comic Book Search
-                </Heading>
-                <Search />
-                <ComicsList />
+            <Stack anchor='center'>
+              <Box flex align='center' justify='center'>
+                <Box 
+                  align='center' 
+                  justify='center'
+                  height='medium'
+                  pad='large'
+                >
+                  <Heading level={3}>
+                    Comic Book Search
+                  </Heading>
+                  <Search />
+                  <ComicsList />
               </Box>
             </Box>
-            </Stack>
-           
-          </Box>
-          </Box>
-      </Grommet>
+          </Stack>
+        </Box>
+      </Box>
+    </Grommet>
     </StoreProvider>
   );
 }
