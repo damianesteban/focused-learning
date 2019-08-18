@@ -77,7 +77,61 @@ funWithDrop = drop 4 "Obi-Wan"
 funWithTakeAtIndex = "Darth Vader" !! 3
 -- 't'
 
--- TODO: Building Functions p. 110
+-- Building Functions
 
+-- Given the list-manipulation functions mentioned in this chapter, 
+-- write functions that take the following inputs and return the expected outputs. 
 
+-- Given
+-- "Curry is awesome"
 
+-- Return
+-- "Curry is awesome!"
+
+addToString :: String
+addToString = "Curry is awesome" ++ "!"
+
+-- Given
+-- "Curry is awesome"
+
+-- Return
+-- "y"
+
+charFromString :: Char
+charFromString = "Curry is awesome!" !! 4
+
+-- Given
+-- "Curry is awesome!"
+
+-- Return
+-- "awesome!"
+
+dropNineFromString :: String
+dropNineFromString = drop 9 "Curry is awesome!"
+
+thirdLetter :: String -> Char
+thirdLetter x = x !! 2
+
+someLetter :: Int -> Char
+someLetter x = "This is nice" !! x
+
+-- NOTE: This is by NO means the best way to do this. But it works for now
+
+-- Using the take and drop functions, see if you can write
+-- a function called rvrs (an abbreviation of ‘reverse’ used because there 
+-- is a function called ‘reverse’ already in Prelude, so if you call your 
+-- function the same name, you’ll get an error message). rvrs should take 
+-- the string “This is nice" and return the result “nice is This"
+
+-- This may not be the most lovely Haskell code you will ever write, 
+-- but it is quite possible using only what we’ve learned so far. 
+-- First write it as a single function in a source file. 
+-- This doesn’t need to, and shouldn’t, 
+-- work for reversing the words of any sentence. 
+-- You’re expected only to slice and dice this particular string 
+-- with take and drop
+
+rvrs phrase = 
+  let x = drop 8 phrase
+      y = take 4 phrase
+  in x ++ " is " ++ y
