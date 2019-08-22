@@ -135,3 +135,30 @@ rvrs phrase =
   let x = drop 8 phrase
       y = take 4 phrase
   in x ++ " is " ++ y
+
+
+-- Data Types
+
+data Mood = Blah | Woot deriving Show
+
+flipMood :: Mood -> Mood
+flipMood mood =
+  case mood of
+    Woot -> Blah
+    Blah -> Woot
+
+-- Numeric Types
+
+-- Integral Numbers
+  -- Int
+  -- Integer
+
+-- Fractional
+  -- Float
+  -- Double
+  -- Rational
+  -- Scientific
+  -- Example: type of the "/"" function :: Fractional a => a -> a -> a
+-- Integral
+
+
